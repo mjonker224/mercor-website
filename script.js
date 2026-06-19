@@ -61,18 +61,20 @@ if (quoteForm) {
     ].filter(Boolean);
 
     const message = encodeURIComponent(lines.join('\n'));
-    const mercorWhatsAppNumber = '27000000000';
+    const mercorWhatsAppNumber = '27825625694';
     window.open(`https://wa.me/${mercorWhatsAppNumber}?text=${message}`, '_blank', 'noopener');
   });
 }
 
-// Varied scroll motion: headings, subheadings and blocks enter from different directions.
+
+// Varied scroll motion: only plays while scrolling down. Resets when the page returns to the top.
 const directionalSelectors = [
   '.hero-copy h1', '.hero-copy .eyebrow', '.hero-text', '.hero-actions', '.hero-proof span',
   '.section-heading .eyebrow', '.section-heading h2', '.section-heading p',
   '.split-section > div > .eyebrow', '.split-section > div > h2', '.split-section > div > p', '.text-link',
   '.card', '.trust-strip div', '.industry-grid div', '.process-step', '.safety-card', '.mini-stats div',
-  '.area-tags span', '.quote-checklist', '.quote-form', '.faq-grid details', '.stock-card', '.footer'
+  '.area-tags span', '.quote-checklist', '.quote-form', '.faq-grid details', '.stock-card', '.photo-card',
+  '.client-pill', '.company-detail', '.footer'
 ];
 
 const directions = ['motion-left', 'motion-up', 'motion-right', 'motion-down'];
@@ -89,7 +91,7 @@ directionalSelectors.forEach((selector) => {
   });
 });
 
-document.querySelectorAll('.cards, .process-grid, .industry-grid, .area-tags, .faq-grid, .stock-grid, .trust-strip, .mini-stats').forEach((group) => {
+document.querySelectorAll('.cards, .process-grid, .industry-grid, .area-tags, .faq-grid, .stock-grid, .trust-strip, .mini-stats, .photo-grid, .company-details-grid').forEach((group) => {
   Array.from(group.children).forEach((child, index) => {
     child.style.setProperty('--stagger', index);
   });
@@ -102,7 +104,14 @@ const isInViewport = (element) => {
   return rect.top < window.innerHeight * 0.88 && rect.bottom > window.innerHeight * -0.08;
 };
 
-const showVisibleItems = () => {
+let lastScrollY = window.scrollY;
+let isScrollingDown = true;
+let topResetArmed = false;
+let topResetTimer = null;
+
+const showVisibleItems = (force = false) => {
+  if (!force && !isScrollingDown && window.scrollY > 8) return;
+
   revealItems.forEach((item) => {
     if (isInViewport(item)) {
       item.classList.add('is-visible');
@@ -110,22 +119,19 @@ const showVisibleItems = () => {
   });
 };
 
-const restartAllAnimations = () => {
+const resetAnimationsAtTop = () => {
   revealItems.forEach((item) => item.classList.remove('is-visible'));
-  // Force the browser to register the reset before replaying visible items.
   document.body.offsetHeight;
   requestAnimationFrame(() => {
-    requestAnimationFrame(showVisibleItems);
+    requestAnimationFrame(() => showVisibleItems(true));
   });
 };
 
 if ('IntersectionObserver' in window && revealItems.length) {
   const revealObserver = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
-      if (entry.isIntersecting) {
+      if (entry.isIntersecting && (isScrollingDown || window.scrollY <= 8)) {
         entry.target.classList.add('is-visible');
-      } else {
-        entry.target.classList.remove('is-visible');
       }
     });
   }, {
@@ -135,23 +141,27 @@ if ('IntersectionObserver' in window && revealItems.length) {
 
   revealItems.forEach((item) => revealObserver.observe(item));
 
-  let topResetArmed = false;
-  let topResetTimer = null;
-
   window.addEventListener('scroll', () => {
-    if (window.scrollY > 140) {
+    const currentY = Math.max(0, window.scrollY);
+    isScrollingDown = currentY > lastScrollY;
+    lastScrollY = currentY;
+
+    if (currentY > 140) {
       topResetArmed = true;
-      return;
     }
 
-    if (window.scrollY <= 8 && topResetArmed) {
+    if (currentY <= 8 && topResetArmed) {
       topResetArmed = false;
       clearTimeout(topResetTimer);
-      topResetTimer = setTimeout(restartAllAnimations, 40);
+      topResetTimer = setTimeout(resetAnimationsAtTop, 50);
+    }
+
+    if (isScrollingDown) {
+      showVisibleItems();
     }
   }, { passive: true });
 
-  showVisibleItems();
+  showVisibleItems(true);
 } else {
   revealItems.forEach((item) => item.classList.add('is-visible'));
 }
