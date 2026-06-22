@@ -61,7 +61,7 @@ if (quoteForm) {
     ].filter(Boolean);
 
     const message = encodeURIComponent(lines.join('\n'));
-    const mercorWhatsAppNumber = '27825625694';
+    const mercorWhatsAppNumber = '27826525694';
     window.open(`https://wa.me/${mercorWhatsAppNumber}?text=${message}`, '_blank', 'noopener');
   });
 }

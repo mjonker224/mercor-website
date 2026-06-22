@@ -64,3 +64,7 @@ Added a fixed bottom-right back-to-top arrow on all pages.
 
 ## v30 note
 Credibility strip rebuilt as a seamless infinite ticker that does not pause on hover. Cranes logo reduced slightly again inside the same header logo box.
+
+
+## v31 note
+Fixed Eskom spelling in the credibility strip, centred the mobile bottom CTA, changed Call/WhatsApp to 082 652 5694, removed VAT number cards from Cranes and Transport, and added a Transport multi-axle section with the supplied transformer photo.
