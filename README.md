@@ -68,3 +68,15 @@ Credibility strip rebuilt as a seamless infinite ticker that does not pause on h
 
 ## v31 note
 Fixed Eskom spelling in the credibility strip, centred the mobile bottom CTA, changed Call/WhatsApp to 082 652 5694, removed VAT number cards from Cranes and Transport, and added a Transport multi-axle section with the supplied transformer photo.
+
+
+## v32 note
+Added favicon files and linked them in all page heads so the Mercor icon can show in browser tabs. Uses absolute /assets paths for deployed routes like /transport.
+
+
+## v33 note
+Updated browser tab favicon to use the exact Mercor icon supplied by the user. Added root favicon.ico and relative favicon links so it works locally and after deployment.
+
+
+## v34 note
+Locked mobile viewport scaling, prevented input-focus zoom, disabled double-tap zoom on controls, and tightened mobile width/overflow rules so the site stays fixed to the phone screen.
