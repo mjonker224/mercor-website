@@ -1,0 +1,8 @@
+# Clean URLs
+/transport /transport.html 200
+/cranes /cranes.html 200
+
+# Redirect file URLs to clean canonical URLs
+/index.html / 301!
+/transport.html /transport 301!
+/cranes.html /cranes 301!

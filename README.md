@@ -80,3 +80,28 @@ Updated browser tab favicon to use the exact Mercor icon supplied by the user. A
 
 ## v34 note
 Locked mobile viewport scaling, prevented input-focus zoom, disabled double-tap zoom on controls, and tightened mobile width/overflow rules so the site stays fixed to the phone screen.
+
+
+## v35 note
+Changed the Transport hero image to the supplied blue-sky multi-axle abnormal load photo without changing the mobile layout settings.
+
+
+## v36 note
+Changed the main homepage/index.html to the Mercor Transport page so mercortransport.co.za loads Transport first. Updated the Transport hero image to the blue-sky locomotive/lowbed photo supplied by the user. Cranes remains available on cranes.html, with Transport links pointing back to the homepage.
+
+
+## v37 SEO note
+SEO-ready version added:
+- sitemap.xml
+- robots.txt
+- _redirects for clean Netlify URLs
+- netlify.toml headers
+- canonical tags
+- improved page titles
+- improved meta descriptions and keywords
+- Open Graph and Twitter card metadata
+- JSON-LD structured data for Organization, LocalBusiness, Service, WebSite and BreadcrumbList
+- clean internal links for /, /transport and /cranes
+
+Submit this sitemap in Google Search Console:
+https://mercortransport.co.za/sitemap.xml
