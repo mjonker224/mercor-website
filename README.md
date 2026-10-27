@@ -105,3 +105,13 @@ SEO-ready version added:
 
 Submit this sitemap in Google Search Console:
 https://mercortransport.co.za/sitemap.xml
+
+
+## V38 — Mercor Cranes Job Gallery (2026-10-27)
+
+The Cranes page now has a dedicated responsive **Job Gallery** featuring one selected photograph from each of the two newly supplied steelwork jobs, two generator handling photos previously supplied, and eight photos from the previous crane projects already in the site. The active Cranes hero photo (`assets/cranes-loading.jpg`) is intentionally excluded from the Job Gallery. The gallery includes an accessible click-to-enlarge view with Escape / close, lazy-loaded photographs, and the new Cranes menu link. The historical `#work` anchor is kept so existing Google Ads sitelinks continue to resolve.
+
+To publish: unzip and copy **the contents of this folder** into the root of the existing GitHub site repository, replacing the matching HTML/CSS/JS files and adding new images under `/assets/`. Commit and push to allow Netlify to redeploy. Do **not** upload just the top-level folder without its contents.
+
+Files changed: `cranes.html`, `styles.css`, `script.js`.
+New images: `assets/job-overhead-steel-framework.jpg`, `assets/job-steel-support-placement.jpg`, `assets/job-generator-lifting.jpg`, `assets/job-generator-loading.jpg`.

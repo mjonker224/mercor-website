@@ -1,24 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18289359007"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18289359007');
-</script>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18289359007"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'AW-18289359007');
-</script>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, viewport-fit=cover" />
   <title>Mercor Cranes | Crane Hire, Crane Truck Hire & Rigging Potchefstroom</title>
@@ -158,7 +140,7 @@
 
       <nav class="nav" id="mainNav">
         <a href="#services">Services</a>
-        <a href="#work">Photos</a>
+        <a href="#job-gallery">Job Gallery</a>
         <a href="#clients">Clients</a>
         <a href="#details">Details</a>
         <a href="#quote">Quote</a>
@@ -304,53 +286,76 @@
         </div>
       </section>
 
-      <section class="section photo-showcase reveal" id="work">
+      <!-- Mercor Cranes job gallery: feature photo per new job, plus historical work. -->
+      <section class="section job-gallery-section reveal" id="job-gallery" aria-labelledby="job-gallery-title">
+        <span id="work" class="gallery-legacy-anchor" aria-hidden="true"></span>
         <div class="section-heading">
-          <p class="eyebrow">Recent work</p>
-          <h2>Real equipment. Real site conditions.</h2>
-          <p>
-            Selected Mercor Cranes photos showing crane truck work, mobile crane lifts and on-site lifting support.
-          </p>
+          <p class="eyebrow">From our sites</p>
+          <h2 id="job-gallery-title">Job Gallery</h2>
+          <p>Real Mercor Cranes projects — structural lifts, generator handling, equipment positioning and mobile crane work. Select any photo to view it in full.</p>
         </div>
-
-        <div class="photo-grid">
-          <article class="photo-card photo-card-large reveal">
-            <img src="/assets/cranes-truck-action.jpg" alt="Mercor Cranes crane truck lifting on site" loading="lazy" />
-            <div>
-              <span>Crane truck</span>
-              <strong>Crane truck lifting support for loading, offloading and site positioning.</strong>
-            </div>
-          </article>
-          <article class="photo-card reveal">
-            <img src="/assets/cranes-truck-front.jpg" alt="Mercor Cranes truck mounted crane front view" loading="lazy" />
-            <div>
-              <span>Site ready</span>
-              <strong>Prepared crane truck support for fast, practical site work.</strong>
-            </div>
-          </article>
-          <article class="photo-card reveal">
-            <img src="/assets/cranes-hospital-wide.jpg" alt="Mercor mobile crane lifting at a facility" loading="lazy" />
-            <div>
-              <span>Mobile crane</span>
-              <strong>Controlled lifting support for client sites.</strong>
-            </div>
-          </article>
-          <article class="photo-card reveal">
-            <img src="/assets/cranes-box-lift.jpg" alt="Mercor mobile crane lifting a boxed load" loading="lazy" />
-            <div>
-              <span>Precision lift</span>
-              <strong>Load placement where safety and control matter.</strong>
-            </div>
-          </article>
-          <article class="photo-card reveal">
-            <img src="/assets/cranes-structure-lift.jpg" alt="Mercor mobile crane lifting steel structure" loading="lazy" />
-            <div>
-              <span>Structures</span>
-              <strong>Steel structure and installation lifting support.</strong>
-            </div>
-          </article>
+        <div class="job-gallery-grid">
+          <button type="button" class="job-gallery-card job-gallery-featured" data-gallery-src="/assets/job-overhead-steel-framework.jpg" data-gallery-title="Overhead framework lift" data-gallery-description="Crane truck supporting positioning of a large steel framework at height." aria-label="View full photo: Overhead framework lift">
+            <span class="job-gallery-image-wrap"><img src="/assets/job-overhead-steel-framework.jpg" alt="Crane truck supporting positioning of a large steel framework at height." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Steelwork installation</span><strong>Overhead framework lift</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card job-gallery-featured" data-gallery-src="/assets/job-steel-support-placement.jpg" data-gallery-title="Steel support placement" data-gallery-description="Crane-assisted positioning of a tall steel support on its concrete base." aria-label="View full photo: Steel support placement">
+            <span class="job-gallery-image-wrap"><img src="/assets/job-steel-support-placement.jpg" alt="Crane-assisted positioning of a tall steel support on its concrete base." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Structural lifting</span><strong>Steel support placement</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card" data-gallery-src="/assets/job-generator-lifting.jpg" data-gallery-title="Generator lifting" data-gallery-description="Crane truck lifting a large generator unit for loading and site positioning." aria-label="View full photo: Generator lifting">
+            <span class="job-gallery-image-wrap"><img src="/assets/job-generator-lifting.jpg" alt="Crane truck lifting a large generator unit for loading and site positioning." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Machinery lifting</span><strong>Generator lifting</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card" data-gallery-src="/assets/job-generator-loading.jpg" data-gallery-title="Generator transport preparation" data-gallery-description="Industrial generator unit secured on the crane truck after handling." aria-label="View full photo: Generator transport preparation">
+            <span class="job-gallery-image-wrap"><img src="/assets/job-generator-loading.jpg" alt="Industrial generator unit secured on the crane truck after handling." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Loading support</span><strong>Generator transport preparation</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card" data-gallery-src="/assets/cranes-hospital-wide.jpg" data-gallery-title="Facility equipment lift" data-gallery-description="Mobile crane deployed for a lifting job at a building and facility." aria-label="View full photo: Facility equipment lift">
+            <span class="job-gallery-image-wrap"><img src="/assets/cranes-hospital-wide.jpg" alt="Mobile crane deployed for a lifting job at a building and facility." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Mobile crane hire</span><strong>Facility equipment lift</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card" data-gallery-src="/assets/cranes-hospital-lift.jpg" data-gallery-title="Precision placement" data-gallery-description="Mobile crane supporting positioning work in a developed site." aria-label="View full photo: Precision placement">
+            <span class="job-gallery-image-wrap"><img src="/assets/cranes-hospital-lift.jpg" alt="Mobile crane supporting positioning work in a developed site." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Site lifting</span><strong>Precision placement</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card" data-gallery-src="/assets/cranes-structure-lift.jpg" data-gallery-title="Structural steelwork" data-gallery-description="Mobile crane lifting and positioning a steel structure." aria-label="View full photo: Structural steelwork">
+            <span class="job-gallery-image-wrap"><img src="/assets/cranes-structure-lift.jpg" alt="Mobile crane lifting and positioning a steel structure." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Structural lifting</span><strong>Structural steelwork</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card" data-gallery-src="/assets/cranes-box-lift.jpg" data-gallery-title="Equipment offloading" data-gallery-description="Mobile crane handling a large boxed load at a client site." aria-label="View full photo: Equipment offloading">
+            <span class="job-gallery-image-wrap"><img src="/assets/cranes-box-lift.jpg" alt="Mobile crane handling a large boxed load at a client site." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Equipment handling</span><strong>Equipment offloading</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card" data-gallery-src="/assets/cranes-truck-action.jpg" data-gallery-title="Excavator attachment handling" data-gallery-description="Crane truck lifting heavy equipment at a rural job site." aria-label="View full photo: Excavator attachment handling">
+            <span class="job-gallery-image-wrap"><img src="/assets/cranes-truck-action.jpg" alt="Crane truck lifting heavy equipment at a rural job site." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Crane truck hire</span><strong>Excavator attachment handling</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card" data-gallery-src="/assets/cranes-hero.jpg" data-gallery-title="Rural site lifting" data-gallery-description="Another view of the crane truck at an earthmoving equipment job." aria-label="View full photo: Rural site lifting">
+            <span class="job-gallery-image-wrap"><img src="/assets/cranes-hero.jpg" alt="Another view of the crane truck at an earthmoving equipment job." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">On-site support</span><strong>Rural site lifting</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card" data-gallery-src="/assets/cranes-truck-side.jpg" data-gallery-title="Crane truck on site" data-gallery-description="Crane truck available for practical site lifting and machinery movement." aria-label="View full photo: Crane truck on site">
+            <span class="job-gallery-image-wrap"><img src="/assets/cranes-truck-side.jpg" alt="Crane truck available for practical site lifting and machinery movement." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Fleet in action</span><strong>Crane truck on site</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
+          <button type="button" class="job-gallery-card" data-gallery-src="/assets/cranes-truck-front.jpg" data-gallery-title="Crane truck ready" data-gallery-description="Mercor crane truck prepared for lifting work." aria-label="View full photo: Crane truck ready">
+            <span class="job-gallery-image-wrap"><img src="/assets/cranes-truck-front.jpg" alt="Mercor crane truck prepared for lifting work." loading="lazy" decoding="async" /></span>
+            <span class="job-gallery-caption"><span class="job-gallery-category">Fleet readiness</span><strong>Crane truck ready</strong><span class="job-gallery-open" aria-hidden="true">View photo <span>↗</span></span></span>
+          </button>
         </div>
       </section>
+
+      <dialog class="job-gallery-lightbox" id="jobGalleryLightbox" aria-label="Job gallery photo viewer">
+        <div class="job-gallery-lightbox-inner">
+          <button type="button" class="job-gallery-close" data-close-gallery aria-label="Close photo viewer">×</button>
+          <img id="jobGalleryLightboxImage" src="" alt="" />
+          <div class="job-gallery-lightbox-info">
+            <strong id="jobGalleryLightboxTitle"></strong>
+            <p id="jobGalleryLightboxDescription"></p>
+          </div>
+        </div>
+      </dialog>
 
       <section class="section company-details-section reveal" id="details">
         <div class="section-heading">
@@ -480,7 +485,7 @@
       </div>
       <div class="footer-links">
         <a href="#services">Services</a>
-        <a href="#work">Photos</a>
+        <a href="#job-gallery">Job Gallery</a>
         <a href="#clients">Clients</a>
         <a href="#quote">Quote</a>
       </div>

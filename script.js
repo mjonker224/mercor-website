@@ -165,3 +165,27 @@ if ('IntersectionObserver' in window && revealItems.length) {
 } else {
   revealItems.forEach((item) => item.classList.add('is-visible'));
 }
+
+
+// Mercor Cranes job gallery — native dialog with keyboard ESC support.
+const jobGalleryLightbox = document.getElementById('jobGalleryLightbox');
+if (jobGalleryLightbox) {
+  const modalImage = document.getElementById('jobGalleryLightboxImage');
+  const modalTitle = document.getElementById('jobGalleryLightboxTitle');
+  const modalDescription = document.getElementById('jobGalleryLightboxDescription');
+  document.querySelectorAll('.job-gallery-card[data-gallery-src]').forEach((card) => {
+    card.addEventListener('click', () => {
+      modalImage.src = card.dataset.gallerySrc;
+      modalImage.alt = card.querySelector('img')?.alt || card.dataset.galleryTitle || 'Mercor Cranes job photo';
+      modalTitle.textContent = card.dataset.galleryTitle || '';
+      modalDescription.textContent = card.dataset.galleryDescription || '';
+      if (typeof jobGalleryLightbox.showModal === 'function') jobGalleryLightbox.showModal();
+      else window.open(modalImage.src, '_blank', 'noopener');
+    });
+  });
+  jobGalleryLightbox.querySelector('[data-close-gallery]')?.addEventListener('click', () => jobGalleryLightbox.close());
+  jobGalleryLightbox.addEventListener('click', (event) => {
+    if (event.target === jobGalleryLightbox) jobGalleryLightbox.close();
+  });
+  jobGalleryLightbox.addEventListener('close', () => { modalImage.removeAttribute('src'); });
+}
