@@ -175,7 +175,7 @@ if (jobGalleryLightbox) {
   const modalDescription = document.getElementById('jobGalleryLightboxDescription');
   document.querySelectorAll('.job-gallery-card[data-gallery-src]').forEach((card) => {
     card.addEventListener('click', () => {
-      modalImage.src = card.dataset.gallerySrc;
+      modalImage.src = card.querySelector('img')?.currentSrc || card.dataset.gallerySrc;
       modalImage.alt = card.querySelector('img')?.alt || card.dataset.galleryTitle || 'Mercor Cranes job photo';
       modalTitle.textContent = card.dataset.galleryTitle || '';
       modalDescription.textContent = card.dataset.galleryDescription || '';

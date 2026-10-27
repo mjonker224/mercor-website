@@ -124,3 +124,15 @@ The optional netlify.toml configuration was deliberately omitted from this packa
 Preserves the original Google Ads global tag `AW-18289359007` on `index.html`, `cranes.html`, and `transport.html`, which was present in the last published GitHub commit `af31b80` but absent from the source V38 archive. The tag is present just once on each page (the previous deployed Cranes HTML had a duplicate).
 
 The earlier Cranes hero and the new 12-photo Job Gallery remain unchanged. This package is a static website: it requires no NPM build and should publish from the repository root `.`. If deployment still fails at configuration stage after deleting netlify.toml, review the full Netlify deploy log and the site Build & Deploy settings (particularly Base directory, Publish directory, and Build command) to find the exact cause.
+
+
+Update v39: fixed job gallery image references and changed the cranes job gallery to a single rolling strip similar to the credibility strip.
+
+
+## V41 – fixed gallery + rolling strip
+- One seamless row of 12 real job photos scrolling continuously (mirrors the existing credibility strip).
+- Four job pictures were embedded in `cranes.html` as WebP so they display even if the new JPEG files aren't uploaded to GitHub correctly; the original JPEGs are still included in `/assets/`.
+- The old hero photo (`cranes-loading.jpg`) is NOT part of the gallery. The hero section is unchanged.
+- Photos still open in full-screen when clicked, using the actual picture displayed.
+- Upload the EXTRACTED CONTENTS of this ZIP to the ROOT of your GitHub site repository, including the `/assets` folder. Do not upload the ZIP as one file or nest a new folder inside the repository.
+- No Netlify config file included. No other site sections changed.
