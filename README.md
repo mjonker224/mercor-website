@@ -115,3 +115,12 @@ To publish: unzip and copy **the contents of this folder** into the root of the 
 
 Files changed: `cranes.html`, `styles.css`, `script.js`.
 New images: `assets/job-overhead-steel-framework.jpg`, `assets/job-steel-support-placement.jpg`, `assets/job-generator-lifting.jpg`, `assets/job-generator-loading.jpg`.
+
+
+## V38 NETLIFY DEPLOYMENT FIX (27 OCT 2026)
+
+The optional netlify.toml configuration was deliberately omitted from this package because the previous GitHub deployment failed at the Netlify configuration-reading stage. The existing `_redirects` file is kept, preserving /cranes and /transport clean URLs. **Important:** replacing files through GitHub's Upload files action does not delete an existing file. Delete the old `netlify.toml` from the root of the GitHub repository and commit that deletion. Then upload the files in this package (extracted; not the ZIP itself), replacing matching files, and commit.
+
+Preserves the original Google Ads global tag `AW-18289359007` on `index.html`, `cranes.html`, and `transport.html`, which was present in the last published GitHub commit `af31b80` but absent from the source V38 archive. The tag is present just once on each page (the previous deployed Cranes HTML had a duplicate).
+
+The earlier Cranes hero and the new 12-photo Job Gallery remain unchanged. This package is a static website: it requires no NPM build and should publish from the repository root `.`. If deployment still fails at configuration stage after deleting netlify.toml, review the full Netlify deploy log and the site Build & Deploy settings (particularly Base directory, Publish directory, and Build command) to find the exact cause.
