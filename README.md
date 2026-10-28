@@ -136,3 +136,7 @@ Update v39: fixed job gallery image references and changed the cranes job galler
 - Photos still open in full-screen when clicked, using the actual picture displayed.
 - Upload the EXTRACTED CONTENTS of this ZIP to the ROOT of your GitHub site repository, including the `/assets` folder. Do not upload the ZIP as one file or nest a new folder inside the repository.
 - No Netlify config file included. No other site sections changed.
+
+
+## V42 — One photo per job
+The Cranes Job Gallery retains its continuous single-row loop and lightbox, but now features exactly one representative photo from each of six distinct jobs (six unique photos, duplicated in the DOM only to make the seamless marquee possible). No separate gallery page or View Gallery button was added. The hero and all other website sections are unchanged.

@@ -3841,7 +3841,7 @@ button,
   align-items: stretch;
   gap: 0;
   width: max-content;
-  animation: job-gallery-roll 52s linear infinite;
+  animation: job-gallery-roll 26s linear infinite;
   will-change: transform;
 }
 .page-cranes .job-gallery-set {
@@ -3943,7 +3943,7 @@ button,
     width: 36px;
   }
   .page-cranes .job-gallery-track {
-    animation-duration: 42s;
+    animation-duration: 21s;
   }
   .page-cranes .job-gallery-set {
     gap: 12px;
